@@ -33,6 +33,30 @@ public class TCoctailXIngredient implements Serializable {
 			super();
 			
 		}
+
+		public CoctailIngredientId getId() {
+			return id;
+		}
+
+		public void setId(CoctailIngredientId id) {
+			this.id = id;
+		}
+
+		public TCoctail getCoctail() {
+			return coctail;
+		}
+
+		public void setCoctail(TCoctail coctail) {
+			this.coctail = coctail;
+		}
+
+		public TIngredient getIngredient() {
+			return ingredient;
+		}
+
+		public void setIngredient(TIngredient ingredient) {
+			this.ingredient = ingredient;
+		}
 	
 	
 	
