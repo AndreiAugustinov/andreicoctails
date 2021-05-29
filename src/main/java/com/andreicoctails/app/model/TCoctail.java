@@ -9,11 +9,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 @Entity
 @Table(name = "t_coctails" ,schema ="co" )
 
 
 public class TCoctail implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 650966725016204116L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "t_coctails_seq")
 	@SequenceGenerator(name = "t_coctails_seq", sequenceName = "co.t_coctails_coctail_id_seq", allocationSize = 1, initialValue = 0)
@@ -43,6 +51,21 @@ public class TCoctail implements Serializable {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	@Override
+	public int hashCode() {
+		
+		return HashCodeBuilder.reflectionHashCode(this);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		return EqualsBuilder.reflectionEquals(this,obj);
+	}
+	@Override
+	public String toString() {
+		
+		return ToStringBuilder.reflectionToString(this);
 	}
 	
 	

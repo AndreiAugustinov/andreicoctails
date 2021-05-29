@@ -10,10 +10,18 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 @Entity
 @Table(name = "t_ingredients", schema = "co")
 
 public class TIngredient implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3123510802370973159L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "t_ingredients_seq")
 	@SequenceGenerator(name = "t_ingredients_seq", sequenceName = "co.t_ingredients_ingredient_id_seq", allocationSize = 1, initialValue = 0)
@@ -37,6 +45,24 @@ public class TIngredient implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override
+	public int hashCode() {
+		
+		return HashCodeBuilder.reflectionHashCode(this);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		return EqualsBuilder.reflectionEquals(this,obj);
+	}
+	@Override
+	public String toString() {
+		
+		return ToStringBuilder.reflectionToString(this);
+	}
+	
+	
+			
 	
 	}
 	
