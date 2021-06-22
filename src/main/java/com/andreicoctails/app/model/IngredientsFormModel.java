@@ -1,27 +1,32 @@
 package com.andreicoctails.app.model;
 
-import java.util.Arrays;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public class IngredientFormModel {
+public class IngredientsFormModel {
 	
-	private Long [] ingredient_ids;
+	private Long [] ingredientIds;
 
-	public IngredientFormModel() {
+	public IngredientsFormModel() {
 		super();
 		
 	}
 
-	public Long[] getIngredient_ids() {
-		return ingredient_ids;
+
+
+	public Long[] getIngredientIds() {
+		return ingredientIds;
 	}
 
-	public void setIngredient_ids(Long[] ingredient_ids) {
-		this.ingredient_ids = ingredient_ids;
+
+
+	public void setIngredientIds(Long[] ingredientIds) {
+		this.ingredientIds = ingredientIds;
 	}
+
+
 
 	@Override
 	public int hashCode() {

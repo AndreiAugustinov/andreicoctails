@@ -19,18 +19,19 @@ public class CoctailIngredientId  implements Serializable{
 	 */
 	private static final long serialVersionUID = -4913645603800278573L;
 
-	@Column(name = "cocktailId")
-	private Long cocktailId;
+	@Column(name = "coctail_id")
+	private Long coctail_id;
 
-	@Column(name = "ingredientId")
-	private Long ingredientId;
+	@Column(name = "ingredient_id")
+	private Long ingredient_id;
 
 	
+	
 
-	public CoctailIngredientId(Long cocktailId, Long ingredientId) {
+	public CoctailIngredientId(Long coctail_id, Long ingredient_id) {
 		super();
-		this.cocktailId = cocktailId;
-		this.ingredientId = ingredientId;
+		this.coctail_id = coctail_id;
+		this.ingredient_id = ingredient_id;
 	}
 
 

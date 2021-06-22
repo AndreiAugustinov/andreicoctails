@@ -32,12 +32,12 @@ public class TCoctailXIngredient implements Serializable {
 	private CoctailIngredientId id;
 	
 	 @ManyToOne
-	    @MapsId("coctailId")
+	    @MapsId("coctail_id")
 	    @JoinColumn(name = "coctail_id", nullable = false)
 	    private TCoctail coctail;
 	 
 	    @ManyToOne
-	    @MapsId("ingredientId")
+	    @MapsId("ingredient_id")
 	    @JoinColumn(name = "ingredient_id", nullable = false)
 	    private TIngredient ingredient;
 
